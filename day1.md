@@ -6,3 +6,5 @@ websites:
 
 Tools:
   1) Nmap, or Network Mapper, is an open source Linux command line tool for network exploration and security auditing.
+  2) Gobuster is a tool used to brute-force: URIs (directories and files) in web sites. DNS subdomains (with wildcard support).
+  3) Amass is an open source network mapping and attack surface discovery tool that uses information gathering and other techniques such as active reconnaissance and external asset discovery to scrap all the available data.
