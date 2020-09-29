@@ -73,7 +73,11 @@ Log into Kali Linux with the username and password
 
  Mariadb()> show databases;
 
- !(images)[]
+ ![image](SCREENSHOTS/SQL1.png)
+
+ 
+
+
 
 
 
