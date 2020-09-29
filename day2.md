@@ -90,7 +90,7 @@ mariadb()> GRANT ALL PRIVILIGES ON databasename.* 'username'@'localhost' identif
 
 EX: GRANT ALL PRIVILIGES ON praveendb.* 'dbuser'@'localhost' identified by 'dbpass';
 
- ![image](SCREENSHOTS/Screenshot 2020-09-25 15:20:39.png)
+ ![image](SCREENSHOTS/showdatabase.png)
 
  mariandb()> exit;
 
@@ -113,7 +113,8 @@ mariandb()> use database name
 ex: mariandb()> use paraveendb
 
 It looks as below screenshot.
-![image](SCREENSHOTS/Screenshot 2020-09-25 15:20:39.png)
+![image](SCREENSHOTS/userpass.png)
+
 
 
 
