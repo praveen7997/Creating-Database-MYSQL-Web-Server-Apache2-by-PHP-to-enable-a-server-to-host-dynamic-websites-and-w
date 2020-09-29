@@ -25,7 +25,7 @@ Log into Kali Linux with the username and password
 *     http://local.server.ip
 *The web browser should open a page labeled “Apache2 Ubuntu Default Page,” as in the image below:
 
-
+![image](SCREENSHOTS/apacehe2.png)
 
 
 # How to install My Sql
@@ -113,9 +113,89 @@ mariandb()> use database name
 ex: mariandb()> use paraveendb
 
 It looks as below screenshot.
+
 ![image](SCREENSHOTS/userpass.png)
 
 
+create a table in your database 
+
+mariandb(praveeendb) 
+>CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(200) NOT NULL,
+  `password` varchar(33) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
+
+add data in your tables
+
+mariandb(praveendb)> INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'admin', '45becd6c5dd83e2179cd81df8640cd5a');
+
+mariandb(praveendb)> INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(2, 'Harish', '45becd6c5dd83e2179cd81df8640cd5a');
+
+mariandb(praveendb)> INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(3, 'Rahul', '45becd6c5dd83e2179cd81df8640cd5a');
+
+mariandb(praveendb)> INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(4, 'Hemanth', '45becd6c5dd83e2179cd81df8640cd5a');
+
+exit from Database.
+
+
+* establish conection between database and server along with php file for the web login page
+
+as shown in below screen shot
+
+![image](SCREENSHOTS/dbconfig.png)
+
+
+# change localhost(127.0.0.1)  to Domain name in Apache2 server
+
+Go to path etc/apache2/sites-aviables
+
+$ cd /etc/apache2/sites-aviables
+
+@kali:/etc/apache2/sites-available $ ls
+
+>000-default.conf  default-ssl.conf
+
+Now copy 000-default.conf file into new file name as praveen.com.conf.
+
+>kali:/etc/apache2/sites-available $ sudo cp 000-default.conf praveen.com.conf
+[sudo] password for praveen: *****
+
+>kali:/etc/apache2/sites-available $ ls
+
+000-default.conf  default-ssl.conf  praveen.com.conf
+
+
+Edit file name praveen.com.conf 
+
+
+kali:/etc/apache2/sites-available $ sudo vim praveen.com.conf       
+
+>servername praveen.com
+serveradmin webmaster@localhost 
+Documentroot /var/www/html
+
+![image](SCREENSHOTS/editpraveen.png)
+
+Now create localhost server to your device by editing /etc/hosts file with your domain name to the localhost, looks as below.
+
+$ sudo vim /etc/hosts
+
+![image](SCREENSHOTS/localhostdevice.png)
+
+
+$ sudo a2ensite praveen.com
+
+$ sudo systemctl reload apache2
+
+now we can see login page with domain name as praveen.com
+
+![image](SCREENSHOTS/loginpage.png)
 
 
 
@@ -123,6 +203,10 @@ It looks as below screenshot.
 
 
 
-       
+
+
+
+
+
 
 
