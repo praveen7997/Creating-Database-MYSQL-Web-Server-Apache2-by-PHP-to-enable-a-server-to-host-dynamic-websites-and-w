@@ -75,7 +75,48 @@ Log into Kali Linux with the username and password
 
  ![image](SCREENSHOTS/SQL1.png)
 
- 
+mariadb()> create database databasename;
+
+EX: create database praveendb;
+
+mariadb()> create user 'username'@'localhost' identified by 'password';
+
+ex: create user 'dbuser'@'localhost' identified by 'dbpass';
+
+
+give full permissions to your user
+
+mariadb()> GRANT ALL PRIVILIGES ON databasename.* 'username'@'localhost' identified by 'password';
+
+EX: GRANT ALL PRIVILIGES ON praveendb.* 'dbuser'@'localhost' identified by 'dbpass';
+
+ ![image](SCREENSHOTS/Screenshot 2020-09-25 15:20:39.png)
+
+ mariandb()> exit;
+
+ After exit from mysql loginto mysql using your username and password
+
+ >$ sudo mysql -u username -p
+ Enter password: user password
+
+
+ ex: $ sudo mysql -u dbuser -p
+Enter password: ******
+
+-u stands for user in above command.
+-p stands for password in above command
+
+After entering to your mysql username use your database to add data into your database.
+
+mariandb()> use database name
+
+ex: mariandb()> use paraveendb
+
+It looks as below screenshot.
+![image](SCREENSHOTS/Screenshot 2020-09-25 15:20:39.png)
+
+
+
 
 
 
