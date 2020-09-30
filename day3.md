@@ -30,7 +30,7 @@ There are few tools used for SQL injection attack such as –
 
 # SQL Map
 
-Step 1: Get a Linux based Operating System
+Step 1: Get a Linux based Operating System.
 
 * If you are going to run SQLmap on Windows with Python, make sure you have Python installed, and skip down to the next step. Otherwise, get your Linux system fired up. Either install a Linux virtual machine (Ubuntu or Kali recommended) on Windows (Virtualbox / VMware / Parrallels) or boot up your Linux desktop.
 
